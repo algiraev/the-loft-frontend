@@ -43,5 +43,9 @@ function AdaptiveMenu({ handleMenuOpen }) {
 export default AdaptiveMenu;
 
 AdaptiveMenu.propTypes = {
-  handleMenuOpen: PropTypes.func.isRequired,
+  handleMenuOpen: PropTypes.func,
+};
+
+AdaptiveMenu.defaultProps = {
+  handleMenuOpen: undefined,
 };
