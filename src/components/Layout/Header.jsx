@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Navbar } from './Navbar';
 import { Logo } from '../../assets/Logo';
 import { Button } from '../UI/Button/Button';
-import { Burger } from '../UI/Burger/Burger';
+// import { Burger } from '../UI/Burger/Burger';
 import { AdaptiveMenu } from './AdaptiveMenu';
 
 const StyledHeaedr = styled.div`
@@ -48,9 +48,15 @@ export const Header = () => {
     <>
       <StyledHeaedr>
         <Logo />
-        <Burger className="cursor-pointer" onClick={handleMenuOpen} />
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={handleMenuOpen}
+        >
+          x
+        </button>
       </StyledHeaedr>
-      {isMenuOpen && <AdaptiveMenu />}
+      {isMenuOpen && <AdaptiveMenu handleMenuOpen={handleMenuOpen} />}
     </>
   );
 };

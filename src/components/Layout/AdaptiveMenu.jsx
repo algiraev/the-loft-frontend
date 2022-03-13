@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MenuClose } from '../UI/MenuClose/MenuClose';
+import PropTypes from 'prop-types';
+// import { MenuClose } from '../UI/MenuClose/MenuClose';
+import { Typography } from '../UI/Typography/Typography';
 
 const StyledMenu = styled.div`
   display: flex;
@@ -12,17 +14,31 @@ const StyledMenu = styled.div`
   top: 0;
 `;
 
-export const AdaptiveMenu = () => {
+export const AdaptiveMenu = ({ handleMenuOpen }) => {
   return (
     <StyledMenu>
       <div className="m-auto">
-        <p className="text-white font-medium">Главная</p>
-        <p className="text-white font-medium">Меню</p>
-        <p className="text-white font-medium">Контакты</p>
-        <p className="text-white font-medium">О нас</p>
-        <p className="text-white font-medium">Войти</p>
+        <Typography className="text-white">Главная</Typography>
+        <Typography className="text-white">Меню</Typography>
+        <Typography className="text-white">Контакты</Typography>
+        <Typography className="text-white">О нас</Typography>
+        <Typography className="text-white">Войти</Typography>
       </div>
-      <MenuClose className="absolute right-2 top-2 cursor-pointer" />
+      <button
+        type="button"
+        onClick={handleMenuOpen}
+        className="absolute right-4 top-4 cursor-pointer"
+      >
+        0
+      </button>
     </StyledMenu>
   );
+};
+
+AdaptiveMenu.propTypes = {
+  handleMenuOpen: PropTypes.func,
+};
+
+AdaptiveMenu.defaultProps = {
+  handleMenuOpen: undefined,
 };
