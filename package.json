@@ -15,12 +15,15 @@
     "styled-components": "^5.3.3"
   },
   "scripts": {
+    "check": "npm run prettier:check && npm run lint:fix && npm run test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier src --write",
-    "prettier:check": "prettier src --check"
+    "prettier:check": "prettier src --check",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "eslintConfig": {
     "extends": [
