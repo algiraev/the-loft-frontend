@@ -50,7 +50,7 @@ function Header() {
         <Logo />
         <Burger className="cursor-pointer" onClick={handleMenuOpen} />
       </StyledHeaedr>
-      {isMenuOpen && <AdaptiveMenu handleMenuOpen={handleMenuOpen} />}
+      {isMenuOpen && <AdaptiveMenu />}
     </>
   );
 }

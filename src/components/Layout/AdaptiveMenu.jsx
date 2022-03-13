@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import MenuClose from '../UI/MenuClose/MenuClose';
 
 const StyledMenu = styled.div`
@@ -22,7 +21,7 @@ const StyledListItem = styled.div`
   color: #fff;
 `;
 
-function AdaptiveMenu({ handleMenuOpen }) {
+function AdaptiveMenu() {
   return (
     <StyledMenu>
       <StyledList>
@@ -32,20 +31,9 @@ function AdaptiveMenu({ handleMenuOpen }) {
         <StyledListItem>О нас</StyledListItem>
         <StyledListItem>Войти</StyledListItem>
       </StyledList>
-      <MenuClose
-        className="absolute right-2 top-2 cursor-pointer"
-        onClick={handleMenuOpen}
-      />
+      <MenuClose className="absolute right-2 top-2 cursor-pointer" />
     </StyledMenu>
   );
 }
 
 export default AdaptiveMenu;
-
-AdaptiveMenu.propTypes = {
-  handleMenuOpen: PropTypes.func,
-};
-
-AdaptiveMenu.defaultProps = {
-  handleMenuOpen: undefined,
-};
