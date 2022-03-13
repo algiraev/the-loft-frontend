@@ -20,6 +20,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': 'off',
     'comma-dangle': 'off',
+    'consistent-return': 'off',
+    'object-curly-newline': 'off',
     'no-param-reassign': [
       'error',
       { props: true, ignorePropertyModificationsFor: ['state'] },
