@@ -1,18 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from '../components/Layout/Header';
+import { Routes, Route } from 'react-router-dom';
 import AllDishes from '../features/dishes/AllDishes';
 
 function App() {
   return (
-    <>
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<AllDishes />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <Routes>
+      <Route path="/" element={<AllDishes />} />
+    </Routes>
   );
 }
 
