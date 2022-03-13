@@ -21,7 +21,7 @@ const StyledListItem = styled.div`
   color: #fff;
 `;
 
-function AdaptiveMenu() {
+export const AdaptiveMenu = () => {
   return (
     <StyledMenu>
       <StyledList>
@@ -34,6 +34,4 @@ function AdaptiveMenu() {
       <MenuClose className="absolute right-2 top-2 cursor-pointer" />
     </StyledMenu>
   );
-}
-
-export default AdaptiveMenu;
+};

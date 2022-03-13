@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Navbar from './Navbar';
+import { Navbar } from './Navbar';
 import Logo from '../../assets/Logo';
 import Button from '../UI/Button/Button';
 import Burger from '../UI/Burger/Burger';
-import AdaptiveMenu from './AdaptiveMenu';
+import { AdaptiveMenu } from './AdaptiveMenu';
 
 const StyledHeaedr = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const StyledHeaedr = styled.div`
   top: 0;
 `;
 
-function Header() {
+export const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -53,6 +53,4 @@ function Header() {
       {isMenuOpen && <AdaptiveMenu />}
     </>
   );
-}
-
-export default Header;
+};

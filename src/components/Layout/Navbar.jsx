@@ -14,7 +14,7 @@ const StyledListItem = styled.div`
   }
 `;
 
-function Navbar() {
+export const Navbar = () => {
   return (
     <StyledList>
       <StyledListItem>Главная</StyledListItem>
@@ -23,6 +23,4 @@ function Navbar() {
       <StyledListItem>О нас</StyledListItem>
     </StyledList>
   );
-}
-
-export default Navbar;
+};

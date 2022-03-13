@@ -1,7 +1,5 @@
 import React from 'react';
 
-function AllDishes() {
+export const AllDishes = () => {
   return <div className="mt-24">dishes</div>;
-}
-
-export default AllDishes;
+};

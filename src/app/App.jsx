@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import AllDishes from '../features/dishes/AllDishes';
-import Header from '../components/Layout/Header';
+import { AllDishes } from '../features/dishes/AllDishes';
+import { Header } from '../components/Layout/Header';
 
 function App() {
   return (
