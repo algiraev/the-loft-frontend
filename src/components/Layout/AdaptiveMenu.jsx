@@ -12,25 +12,16 @@ const StyledMenu = styled.div`
   top: 0;
 `;
 
-const StyledList = styled.div`
-  margin: auto;
-`;
-
-const StyledListItem = styled.div`
-  font-weight: 500;
-  color: #fff;
-`;
-
 export const AdaptiveMenu = () => {
   return (
     <StyledMenu>
-      <StyledList>
-        <StyledListItem>Главная</StyledListItem>
-        <StyledListItem>Меню</StyledListItem>
-        <StyledListItem>Контакты</StyledListItem>
-        <StyledListItem>О нас</StyledListItem>
-        <StyledListItem>Войти</StyledListItem>
-      </StyledList>
+      <dvi className="m-auto">
+        <p className="text-white font-medium">Главная</p>
+        <p className="text-white font-medium">Меню</p>
+        <p className="text-white font-medium">Контакты</p>
+        <p className="text-white font-medium">О нас</p>
+        <p className="text-white font-medium">Войти</p>
+      </dvi>
       <MenuClose className="absolute right-2 top-2 cursor-pointer" />
     </StyledMenu>
   );
