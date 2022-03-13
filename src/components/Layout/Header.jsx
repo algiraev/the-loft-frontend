@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Navbar } from './Navbar';
 import { Logo } from '../../assets/Logo';
 import { Button } from '../UI/Button/Button';
-// import { Burger } from '../UI/Burger/Burger';
 import { AdaptiveMenu } from './AdaptiveMenu';
+import { MenuRoundedIcon } from '../Icons/MenuRoundedIcon';
 
 const StyledHeaedr = styled.div`
   display: flex;
@@ -48,13 +48,7 @@ export const Header = () => {
     <>
       <StyledHeaedr>
         <Logo />
-        <button
-          type="button"
-          className="cursor-pointer"
-          onClick={handleMenuOpen}
-        >
-          x
-        </button>
+        <MenuRoundedIcon className="cursor-pointer" onClick={handleMenuOpen} />
       </StyledHeaedr>
       {isMenuOpen && <AdaptiveMenu handleMenuOpen={handleMenuOpen} />}
     </>
