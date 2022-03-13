@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Logo({ width, height, ...props }) {
+export const Logo = ({ width, height, ...props }) => {
   return (
     <svg
       width={width}
@@ -61,9 +61,7 @@ function Logo({ width, height, ...props }) {
       />
     </svg>
   );
-}
-
-export default Logo;
+};
 
 Logo.propTypes = {
   width: PropTypes.string,

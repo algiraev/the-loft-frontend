@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AllDishes } from '../features/dishes/AllDishes';
 import { Header } from '../components/Layout/Header';
 
-function App() {
+export const App = () => {
   return (
     <>
       <Header />
@@ -12,6 +12,4 @@ function App() {
       </Routes>
     </>
   );
-}
-
-export default App;
+};

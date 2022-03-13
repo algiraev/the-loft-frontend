@@ -1,8 +1,6 @@
 import React from 'react';
 import { IoMdClose } from 'react-icons/io';
 
-function MenuClose({ ...props }) {
+export const MenuClose = ({ ...props }) => {
   return <IoMdClose color="white" size={30} {...props} />;
-}
-
-export default MenuClose;
+};

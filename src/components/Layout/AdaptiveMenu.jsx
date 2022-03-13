@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MenuClose from '../UI/MenuClose/MenuClose';
+import { MenuClose } from '../UI/MenuClose/MenuClose';
 
 const StyledMenu = styled.div`
   display: flex;

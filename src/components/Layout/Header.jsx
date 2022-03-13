@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Navbar } from './Navbar';
-import Logo from '../../assets/Logo';
-import Button from '../UI/Button/Button';
-import Burger from '../UI/Burger/Burger';
+import { Logo } from '../../assets/Logo';
+import { Button } from '../UI/Button/Button';
+import { Burger } from '../UI/Burger/Burger';
 import { AdaptiveMenu } from './AdaptiveMenu';
 
 const StyledHeaedr = styled.div`

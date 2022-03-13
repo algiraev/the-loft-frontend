@@ -28,15 +28,13 @@ const StyledButton = styled.button`
   }}
 `;
 
-function Button({ children, disabled, variant, ...props }) {
+export const Button = ({ children, disabled, variant, ...props }) => {
   return (
     <StyledButton disabled={disabled} variant={variant} {...props}>
       {children}
     </StyledButton>
   );
-}
-
-export default Button;
+};
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
