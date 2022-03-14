@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Navbar } from './Navbar';
 import { Logo } from '../../assets/Logo';
@@ -15,8 +16,12 @@ const StyledHeaedr = styled.div`
   width: 100%;
   height: 80px;
   padding: 0 25px;
-  position: fixed;
+  position: sticky;
   top: 0;
+
+  @media ${(props) => props.theme.media.phone} {
+    border-radius: 0;
+  }
 `;
 
 export const Header = () => {
@@ -39,17 +44,23 @@ export const Header = () => {
   return windowWidth > 768 ? (
     <StyledHeaedr>
       <div className="flex items-center">
-        <Logo className="mr-10" />
+        <Link to="/">
+          <Logo className="mr-10" />
+        </Link>
         <Navbar />
       </div>
-      <Button>Войти</Button>
+      <Button>
+        <Link to="/login">Войти</Link>
+      </Button>
     </StyledHeaedr>
   ) : (
     <>
-      <StyledHeaedr>
-        <Logo />
-        <MenuIcon onClick={handleMenuOpen} />
-      </StyledHeaedr>
+      {isMenuOpen ? null : (
+        <StyledHeaedr>
+          <Logo />
+          <MenuIcon onClick={handleMenuOpen} />
+        </StyledHeaedr>
+      )}
       {isMenuOpen && <AdaptiveMenu handleMenuOpen={handleMenuOpen} />}
     </>
   );

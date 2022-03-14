@@ -8,7 +8,7 @@ export const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<AllDishes />} />
+        <Route path="/menu" element={<AllDishes />} />
       </Routes>
     </>
   );

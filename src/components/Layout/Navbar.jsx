@@ -1,9 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-const StyledList = styled.div`
-  display: flex;
-`;
 
 const StyledListItem = styled.div`
   margin-right: 20px;
@@ -16,11 +13,19 @@ const StyledListItem = styled.div`
 
 export const Navbar = () => {
   return (
-    <StyledList>
-      <StyledListItem>Главная</StyledListItem>
-      <StyledListItem>Меню</StyledListItem>
-      <StyledListItem>Контакты</StyledListItem>
-      <StyledListItem>О нас</StyledListItem>
-    </StyledList>
+    <div className="flex">
+      <StyledListItem>
+        <Link to="/">Главная</Link>
+      </StyledListItem>
+      <StyledListItem>
+        <Link to="/menu">Меню</Link>
+      </StyledListItem>
+      <StyledListItem>
+        <Link to="/contacts">Контакты</Link>
+      </StyledListItem>
+      <StyledListItem>
+        <Link to="/about">О нас</Link>
+      </StyledListItem>
+    </div>
   );
 };
