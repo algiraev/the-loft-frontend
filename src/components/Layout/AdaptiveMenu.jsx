@@ -25,7 +25,7 @@ export const AdaptiveMenu = ({ handleMenuOpen }) => {
         <Typography className="text-white">Войти</Typography>
       </div>
       <MenuCloseIcon
-        className="absolute right-4 top-4 cursor-pointer"
+        className="absolute right-4 top-4 cursor-pointer w-9 h-9"
         onClick={handleMenuOpen}
       />
     </StyledMenu>
