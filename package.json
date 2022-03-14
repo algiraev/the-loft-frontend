@@ -14,7 +14,7 @@
     "styled-components": "^5.3.3"
   },
   "scripts": {
-    "check": "npm run prettier:check && npm run lint && npm run test",
+    "check": "npm run prettier:check && npm run lint && npm run test && npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

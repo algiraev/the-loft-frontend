@@ -4,7 +4,7 @@ import { Navbar } from './Navbar';
 import { Logo } from '../../assets/Logo';
 import { Button } from '../UI/Button/Button';
 import { AdaptiveMenu } from './AdaptiveMenu';
-import { MenuRoundedIcon } from '../Icons/MenuRoundedIcon';
+import MenuIcon from '../Icons/MenuIcon';
 
 const StyledHeaedr = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const Header = () => {
     <>
       <StyledHeaedr>
         <Logo />
-        <MenuRoundedIcon className="cursor-pointer" onClick={handleMenuOpen} />
+        <MenuIcon onClick={handleMenuOpen} />
       </StyledHeaedr>
       {isMenuOpen && <AdaptiveMenu handleMenuOpen={handleMenuOpen} />}
     </>

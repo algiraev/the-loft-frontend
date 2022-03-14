@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Typography } from '../UI/Typography/Typography';
-import { MenuCloseIcon } from '../Icons/MenuCloseIcon';
+import CloseIcon from '../Icons/CloseIcon';
 
 const StyledMenu = styled.div`
   display: flex;
@@ -24,10 +24,7 @@ export const AdaptiveMenu = ({ handleMenuOpen }) => {
         <Typography className="text-white">О нас</Typography>
         <Typography className="text-white">Войти</Typography>
       </div>
-      <MenuCloseIcon
-        className="absolute right-4 top-4 cursor-pointer w-9 h-9"
-        onClick={handleMenuOpen}
-      />
+      <CloseIcon className="absolute right-4 top-4" onClick={handleMenuOpen} />
     </StyledMenu>
   );
 };
